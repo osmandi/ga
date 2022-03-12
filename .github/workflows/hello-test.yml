@@ -9,6 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "github.ref= ${{ github.ref }}"
-      - run: echo "github.head_ref= ${{ github.head_ref }}"
+      - run: echo "github.head_ref= ${{ github.head_ref }}" # This print the origin branch in the PR
       - run: echo "github.base_ref= ${{ github.base_ref }}"
       - run: echo "pr_name= $(echo ${{ steps.extract_branch.outputs.branch }})"
